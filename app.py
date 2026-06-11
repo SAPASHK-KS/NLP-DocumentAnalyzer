@@ -1,7 +1,11 @@
 import streamlit as st
 import nltk
 import string
+import nltk
 
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('stopwords')
 from collections import Counter
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
