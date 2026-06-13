@@ -1,11 +1,12 @@
 import streamlit as st
-import nltk
+
 import string
 import nltk
 
-nltk.download('punkt')
-nltk.download('punkt_tab')
-nltk.download('stopwords')
+resources = ["punkt", "punkt_tab", "stopwords"]
+
+for resource in resources:
+    nltk.download(resource, quiet=True)
 from collections import Counter
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
